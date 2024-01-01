@@ -1,44 +1,54 @@
-# Eflower - Aplikasi Marketplace Tanaman Hias
-
-![Eflower Logo](link_ke_logo)
+# Eflower - Rancang Bangun Aplikasi Marketplace Tanaman Hias
 
 ## Deskripsi Proyek
+Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi marketplace tanaman hias. Aplikasi ini akan memberikan pengalaman berbelanja tanaman hias secara online bagi para pengguna yang mencintai keindahan alam.
 
-Eflower adalah sebuah aplikasi marketplace yang dirancang untuk memudahkan para pecinta tanaman hias dalam mencari, membeli, dan menjual tanaman hias secara online. Aplikasi ini menyediakan platform yang memungkinkan pengguna untuk menjelajahi berbagai jenis tanaman hias, berinteraksi dengan penjual, dan melakukan transaksi dengan mudah dan aman.
+## Anggota Kelompok
+- Wahyudi (Frontend Developer)
+  - Teknologi: Bootstrap, Native HTML, Native JavaScript
+- Fajar (Backend Developer)
+  - Framework: CodeIgniter, PHP Native
+  - Database: Oracle
 
 ## Fitur Utama
+1. **Pencarian Tanaman Hias**
+   - Pengguna dapat mencari tanaman hias berdasarkan jenis, ukuran, dan karakteristik lainnya.
+2. **Jual-Beli Online**
+   - Pengguna dapat menjual dan membeli tanaman hias melalui platform ini.
+3. **Keranjang Belanja**
+   - Pengguna dapat menyimpan tanaman hias pilihan dalam keranjang belanja sebelum melakukan pembayaran.
+4. **Profil Pengguna**
+   - Setiap pengguna memiliki profil pribadi untuk melihat riwayat transaksi dan mengelola produk yang dijual.
 
-- **Jelajahi Tanaman Hias:** Lihat berbagai jenis tanaman hias yang tersedia dengan deskripsi dan gambar yang jelas.
-- **Pencarian Terpintar:** Gunakan fitur pencarian untuk menemukan tanaman hias sesuai dengan preferensi dan kebutuhan Anda.
-- **Profil Pengguna:** Buat dan kelola profil pengguna Anda, sertakan informasi tentang tanaman hias yang Anda miliki atau jual.
-- **Keranjang Belanja:** Tambahkan tanaman hias ke keranjang belanja Anda dan lanjutkan dengan proses pembayaran yang mudah.
-- **Pesan dan Ulasan:** Berkomunikasi dengan penjual melalui fitur pesan dan berikan ulasan untuk produk yang Anda beli.
+## Teknologi yang Digunakan
+- **Frontend:**
+  - Bootstrap: Desain responsif dan tata letak menarik.
+  - Native HTML: Struktur dasar halaman.
+  - Native JavaScript: Interaksi dinamis dan fungsionalitas tambahan.
 
-## Instalasi
+- **Backend:**
+  - CodeIgniter: Framework backend untuk mempermudah pengembangan.
+  - PHP Native: Digunakan untuk fungsi khusus yang tidak tertutup dalam CodeIgniter.
+  - Oracle: Database untuk menyimpan data pengguna, transaksi, dan informasi tanaman hias.
 
-1. Clone repositori ini ke mesin lokal Anda.
-    ```bash
-    git clone https://github.com/nama_pengguna/Eflower.git
-    ```
-2. Buka proyek di editor kode favorit Anda.
-3. Instal dependensi dengan menjalankan perintah berikut:
-    ```bash
-    npm install
-    ```
-4. Jalankan aplikasi dengan:
-    ```bash
-    npm start
-    ```
-5. Akses aplikasi melalui browser di [http://localhost:3000](http://localhost:3000).
+## Cara Menjalankan Proyek
+1. **Backend Setup**
+   - Pastikan server Oracle terpasang dan konfigurasi koneksi dilakukan.
+   - Impor skema database yang disediakan.
+
+2. **Frontend Setup**
+   - Jalankan halaman web melalui server lokal atau platform hosting.
+
+3. **Akses Aplikasi**
+   - Buka aplikasi melalui browser dengan mengakses alamat sesuai konfigurasi server lokal atau hosting.
 
 ## Kontribusi
+- Jika Anda ingin berkontribusi, fork repositori ini dan ajukan pull request dengan perubahan yang diinginkan.
 
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat *fork* dari repositori ini dan kirim *pull request* setelah melakukan perubahan. Pastikan untuk membaca panduan kontribusi sebelumnya.
+## Laporan Masalah
+- Temui masalah atau punya saran? Buat *issue* baru di bagian *Issues* pada repositori ini.
 
 ## Lisensi
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
-Proyek ini dilisensikan di bawah lisensi [MIT License](LICENSE).
-
----
-
-Terima kasih telah tertarik dan berkontribusi pada proyek Eflower. Jangan ragu untuk memberikan masukan dan saran Anda!
+Terima kasih atas kontribusi Anda dalam mengembangkan Eflower - Aplikasi Marketplace Tanaman Hias!

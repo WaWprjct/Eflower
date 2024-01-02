@@ -47,14 +47,16 @@ Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi
 ```bash
    git clone https://github.com/WaWprjct/Eflower
    cd Eflower
+```
 
 - Lalu jika ingin push / upload hasil :
 ```bash
    git checkout -b nama-branch
-   git add .
+   git add nama-dokumen-yang-dirubah-tambah.type
    git commit -m "Label: Deskripsi singkat perubahan"
    git pull origin nama-branch
    git push origin nama-branch
+```
 
 
 ## Laporan Masalah

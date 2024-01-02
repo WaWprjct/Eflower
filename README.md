@@ -44,6 +44,18 @@ Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi
 
 ## Kontribusi
 - Jika Anda ingin berkontribusi, fork repositori ini dan ajukan pull request dengan perubahan yang diinginkan.
+```bash
+   git clone https://github.com/WaWprjct/Eflower
+   cd Eflower
+
+- Lalu jika ingin push / upload hasil :
+```bash
+   git checkout -b nama-branch
+   git add .
+   git commit -m "Label: Deskripsi singkat perubahan"
+   git pull origin nama-branch
+   git push origin nama-branch
+
 
 ## Laporan Masalah
 - Temui masalah atau punya saran? Buat *issue* baru di bagian *Issues* pada repositori ini.

@@ -24,59 +24,10 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 			crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="Assets/signin.css" />
 
-		<style>
-			.bd-placeholder-img {
-				font-size: 1.125rem;
-				text-anchor: middle;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				user-select: none;
-			}
-
-			@media (min-width: 768px) {
-				.bd-placeholder-img-lg {
-					font-size: 3.5rem;
-				}
-			}
-
-			input.invalid {
-				border: red solid 3px;
-				animation: shake 300ms;
-			}
-
-			.invalidInfo {
-				text-shadow: 1 2 1 #fff;
-				animation: shake 300s;
-			}
-
-			input.confirm-not-matching {
-				animation: shake 300ms;
-				border: red solid 3px;
-			}
-
-			@keyframes shake {
-				0%,
-				100% {
-					transform: translate(0);
-				}
-				25% {
-					transform: translate(0.125rem);
-				}
-				75% {
-					transform: translate(-0.125rem);
-				}
-			}
-
-			.hide-cek {
-				display: none;
-			}
-
-			.show-cek {
-				display: inline-block;
-			}
-		</style>
+		<!-- CSS Native Link -->
+		<link rel="stylesheet" href="Assets/css-Native/signin.css" />
+		<link rel="stylesheet" href="Assets/css-Native/formStyle.css" />
 	</head>
 	<body class="d-flex">
 		<div id="radius-shape-4" class="position-absolute shadow-5-strong"></div>
@@ -166,7 +117,11 @@
 								class="form-control"
 								type="password"
 								placeholder="password"
+								id="pass-login"
+								maxlength="30"
 								required />
+							<input type="checkbox" id="cek-pass-log" class="hide-cek mt-1" />
+							<p id="title-cek-log" class="hide-cek">Show Password</p>
 							<label for="password" class="text-dark">Password</label>
 						</div>
 						<!-- input login akhir -->
@@ -218,9 +173,11 @@
 								id="passwordReg"
 								name="passReg"
 								pattern=".[-8]*"
+								maxlength="30"
 								title="Password must be at least 8 characters"
 								required />
-								<input type="checkbox" id="cek-pass" class="hide-cek">
+							<input type="checkbox" id="cek-pass" class="hide-cek mt-1" />
+							<p id="title-cek" class="hide-cek">Show Password</p>
 							<label for="passwordReg" class="text-dark">Password</label>
 						</div>
 						<div
@@ -235,7 +192,10 @@
 								id="passConfrm"
 								name="passConfrm"
 								pattern="[a-zA-Z0-9]+"
+								maxlength="30"
 								required />
+							<input type="checkbox" id="cek-pass2" class="hide-cek mt-1" />
+							<p id="title-cek2" class="hide-cek">Show Password</p>
 							<label for="passConfrm" class="text-dark">Confirm Password</label>
 						</div>
 						<!-- input pendaftaran akhir -->
@@ -255,6 +215,8 @@
 			</div>
 		</div>
 
+		<!-- js Area -->
+
 		<!-- bootstrap -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -266,65 +228,17 @@
 			crossorigin="anonymous"></script>
 
 		<!-- validasi persyaratan password -->
-		<script>
-			var passwordInput = document.getElementById("passwordReg");
-			var cekPass = document.getElementById('cek-pass');
-			var errorMessage = document.getElementById("password-error-message");
-
-			passwordInput.addEventListener("input", function () {
-				if (passwordInput.value.length >= 8) {
-					passwordInput.classList.remove("invalid");
-					cekPass.classList.add("show-cek");
-					cekPass.classList.remove("hide-cek");
-					errorMessage.textContent = "";
-				} else {
-					passwordInput.classList.add("invalid");
-					errorMessage.textContent = "Password must be at least 8 characters";
-					cekPass.classList.add("hide-cek");
-					cekPass.classList.remove("show-cek");
-					cekPass.checked = false;
-				}
-			});
-		</script>
+		<script type="module" src="Assets/js-Native/passRegValid.js"></script>
 
 		<!-- validasi ulang password -->
-		<script>
-			var passwordInput = document.getElementById("passwordReg");
-			var confirmInput = document.getElementById("passConfrm");
-
-			confirmInput.addEventListener("input", function () {
-				if (confirmInput.value === passwordInput.value) {
-					confirmInput.classList.remove("confirm-not-matching");
-				} else {
-					confirmInput.classList.add("confirm-not-matching");
-				}
-			});
-		</script>
+		<script type="module" src="Assets/js-Native/passConfirm.js"></script>
 
 		<!-- slide login dan singup -->
-		<script>
-			const loginText = document.querySelector(".title-text .login");
-			const loginForm = document.querySelector("form.login");
-			const loginBtn = document.querySelector("label.login");
-			const signupBtn = document.querySelector("label.signup");
-			const signupLink = document.querySelector("form .signup-link a");
-			const loginLink = document.querySelector("form .login-link a");
-			signupBtn.onclick = () => {
-				loginForm.style.marginLeft = "-50%";
-				loginText.style.marginLeft = "-50%";
-			};
-			loginBtn.onclick = () => {
-				loginForm.style.marginLeft = "0%";
-				loginText.style.marginLeft = "0%";
-			};
-			signupLink.onclick = () => {
-				signupBtn.click();
-				return false;
-			};
-			loginLink.onclick = () => {
-				loginBtn.click();
-				return false;
-			};
-		</script>
+		<script type="module" src="Assets/js-Native/slideForm.js"></script>
+
+		<!-- showing password feature -->
+		<script type="module" src="Assets/js-Native/showingPass.js"></script>
+
+		<!-- End js Area -->
 	</body>
 </html>

@@ -2,8 +2,8 @@ html,
 body {
 	height: 100%;
 	align-items: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	padding-left: 25rem;
 	background-color: #f5f5f5;
 }
@@ -149,7 +149,8 @@ input[type="radio"] {
 }
 
 .form-inner form .pass-link a,
-.form-inner form .signup-link a {
+.form-inner form .signup-link a,
+.form-inner form .login-link a {
 	color: #1a75ff;
 	text-decoration: none;
 }

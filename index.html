@@ -41,13 +41,19 @@
 				}
 			}
 
-			input:invalid {
+			input.invalid {
+				border: red solid 3px;
 				animation: shake 300ms;
+			}
+
+			.invalidInfo {
+				text-shadow: 1 2 1 #fff;
+				animation: shake 300s;
 			}
 
 			input.confirm-not-matching {
 				animation: shake 300ms;
-				border: red solid 3px; /* Ganti warna batas sesuai kebutuhan */
+				border: red solid 3px;
 			}
 
 			@keyframes shake {
@@ -61,6 +67,14 @@
 				75% {
 					transform: translate(-0.125rem);
 				}
+			}
+
+			.hide-cek {
+				display: none;
+			}
+
+			.show-cek {
+				display: inline-block;
 			}
 		</style>
 	</head>
@@ -147,7 +161,7 @@
 								required />
 							<label for="user" class="text-dark">Username or Email</label>
 						</div>
-						<div class="mt-3 form-floating">
+						<div class="mt-3 form-floating pass-show">
 							<input
 								class="form-control"
 								type="password"
@@ -203,9 +217,15 @@
 								placeholder="Password"
 								id="passwordReg"
 								name="passReg"
+								pattern=".[-8]*"
+								title="Password must be at least 8 characters"
 								required />
+								<input type="checkbox" id="cek-pass" class="hide-cek">
 							<label for="passwordReg" class="text-dark">Password</label>
 						</div>
+						<div
+							id="password-error-message"
+							class="text-danger fw-lighter invalidInfo"></div>
 
 						<div class="mt-2 form-floating">
 							<input
@@ -234,6 +254,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- bootstrap -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -243,6 +265,29 @@
 			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
 			crossorigin="anonymous"></script>
 
+		<!-- validasi persyaratan password -->
+		<script>
+			var passwordInput = document.getElementById("passwordReg");
+			var cekPass = document.getElementById('cek-pass');
+			var errorMessage = document.getElementById("password-error-message");
+
+			passwordInput.addEventListener("input", function () {
+				if (passwordInput.value.length >= 8) {
+					passwordInput.classList.remove("invalid");
+					cekPass.classList.add("show-cek");
+					cekPass.classList.remove("hide-cek");
+					errorMessage.textContent = "";
+				} else {
+					passwordInput.classList.add("invalid");
+					errorMessage.textContent = "Password must be at least 8 characters";
+					cekPass.classList.add("hide-cek");
+					cekPass.classList.remove("show-cek");
+					cekPass.checked = false;
+				}
+			});
+		</script>
+
+		<!-- validasi ulang password -->
 		<script>
 			var passwordInput = document.getElementById("passwordReg");
 			var confirmInput = document.getElementById("passConfrm");
@@ -256,6 +301,7 @@
 			});
 		</script>
 
+		<!-- slide login dan singup -->
 		<script>
 			const loginText = document.querySelector(".title-text .login");
 			const loginForm = document.querySelector("form.login");

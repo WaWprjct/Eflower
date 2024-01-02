@@ -40,6 +40,28 @@
 					font-size: 3.5rem;
 				}
 			}
+
+			input:invalid {
+				animation: shake 300ms;
+			}
+
+			input.confirm-not-matching {
+				animation: shake 300ms;
+				border: red solid 3px; /* Ganti warna batas sesuai kebutuhan */
+			}
+
+			@keyframes shake {
+				0%,
+				100% {
+					transform: translate(0);
+				}
+				25% {
+					transform: translate(0.125rem);
+				}
+				75% {
+					transform: translate(-0.125rem);
+				}
+			}
 		</style>
 	</head>
 	<body class="d-flex">
@@ -113,15 +135,17 @@
 					<label for="signup" class="slide signup">Register</label>
 					<div class="slider-tab"></div>
 				</div>
+
 				<div class="form-inner">
-					<form action="#" class="login">
+					<form action="#" class="login" method="post">
+						<!-- input login -->
 						<div class="md-2 form-floating">
 							<input
 								class="form-control"
 								type="text"
 								placeholder="Masukan Email "
 								required />
-							<label for="user">Username or Email</label>
+							<label for="user" class="text-dark">Username or Email</label>
 						</div>
 						<div class="mt-3 form-floating">
 							<input
@@ -129,20 +153,29 @@
 								type="password"
 								placeholder="password"
 								required />
-							<label for="password">Password</label>
+							<label for="password" class="text-dark">Password</label>
 						</div>
+						<!-- input login akhir -->
+
 						<div class="pass-link text-center mb-4 mt-5">
-							<a href="#">Lupa password?</a>
+							<a href="#" class="text-primary">Lupa password?</a>
 						</div>
+
+						<!-- tombol login -->
 						<div class="btn btn-warning">
 							<div class="btn btn-warning text-white fw-bolder">Login</div>
 							<input type="submit" value="Login" />
 						</div>
+						<!-- tombol login akhir -->
+
 						<div class="mt-3 text-center signup-link">
-							Haven't an Account? <a href="">Register Now</a>
+							Haven't an Account?
+							<a href="" class="text-primary">Register Now</a>
 						</div>
 					</form>
-					<form action="#" class="signup">
+
+					<form action="#" class="signup" method="post">
+						<!-- kolom input pendaftaran -->
 						<div class="form-floating">
 							<input
 								class="form-control"
@@ -150,8 +183,9 @@
 								placeholder="Username"
 								name="username"
 								required />
-							<label for="username">Username</label>
+							<label for="username" class="text-dark">Username</label>
 						</div>
+
 						<div class="mt-2 form-floating">
 							<input
 								class="form-control"
@@ -159,30 +193,40 @@
 								placeholder="Email"
 								name="email"
 								required />
-							<label for="email">Email Address</label>
+							<label for="email" class="text-dark">Email Address</label>
 						</div>
+
 						<div class="mt-2 form-floating">
 							<input
 								class="form-control"
 								type="password"
 								placeholder="Password"
-								name="pass"
+								id="passwordReg"
+								name="passReg"
 								required />
-							<label for="password">Password</label>
+							<label for="passwordReg" class="text-dark">Password</label>
 						</div>
+
 						<div class="mt-2 form-floating">
 							<input
 								class="form-control"
 								type="password"
 								placeholder="Ulangi password"
+								id="passConfrm"
 								name="passConfrm"
+								pattern="[a-zA-Z0-9]+"
 								required />
-							<label for="passConfrm">Confirm Password</label>
+							<label for="passConfrm" class="text-dark">Confirm Password</label>
 						</div>
+						<!-- input pendaftaran akhir -->
+
+						<!-- bagian ini dalah tombol Daftar -->
 						<div class="mt-4 btn btn-warning">
 							<div class="btn btn-warning text-white fw-bolder">Submit</div>
 							<input type="submit" value="Daftar" />
 						</div>
+						<!-- akhir tombol login -->
+
 						<div class="login-link mt-3 text-center">
 							Have an Account? <a href="">Login</a>
 						</div>
@@ -198,6 +242,20 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
 			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
 			crossorigin="anonymous"></script>
+
+		<script>
+			var passwordInput = document.getElementById("passwordReg");
+			var confirmInput = document.getElementById("passConfrm");
+
+			confirmInput.addEventListener("input", function () {
+				if (confirmInput.value === passwordInput.value) {
+					confirmInput.classList.remove("confirm-not-matching");
+				} else {
+					confirmInput.classList.add("confirm-not-matching");
+				}
+			});
+		</script>
+
 		<script>
 			const loginText = document.querySelector(".title-text .login");
 			const loginForm = document.querySelector("form.login");

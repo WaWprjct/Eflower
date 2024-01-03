@@ -34,7 +34,7 @@ Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi
 
 ## Cara Menjalankan Proyek
 1. **Backend Setup**
-   - Pastikan server Oracle terpasang dan konfigurasi koneksi dilakukan.
+   - Pastikan server packaging yang terdapat MySql seperti Xampp terpasang dan konfigurasi koneksi dilakukan.
    - Impor skema database yang disediakan.
 
 2. **Frontend Setup**

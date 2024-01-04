@@ -1,5 +1,38 @@
 <?php include "header.php" ?>
 <main>
+    <!-- carousel -->
+    <section class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://e0.pxfuel.com/wallpapers/871/23/desktop-wallpaper-nature-plants-plant-pot-houseplant-resolution.jpg"
+                        class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://e0.pxfuel.com/wallpapers/907/585/desktop-wallpaper-houseplant-iphone-android-background-houseplants.jpg"
+                        class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/809/837/desktop-wallpaper-3840x2400-leaves-plant-green-dark-vegetation-ultra-16-10-backgrounds-green-plants.jpg"
+                        class="d-block w-100" alt="">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- carousel -->
     <div class="album py-5 bg-light">
         <div class="container">
 
@@ -214,21 +247,7 @@
 
 </main>
 
-<footer class="text-muted py-5">
-    <div class="container">
-        <p class="float-end mb-1">
-            <a href="#">Back to top</a>
-        </p>
-        <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                href="../getting-started/introduction/">getting started guide</a>.</p>
-    </div>
-</footer>
+<?php include "footer.php" ?>
 
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
-</body>
-
-</html>

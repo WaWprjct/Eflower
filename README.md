@@ -5,10 +5,10 @@ Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi
 
 ## Anggota Kelompok
 - Wahyudi (Frontend Developer)
-  - Teknologi: Bootstrap, Native HTML, Native JavaScript
+  - Teknologi: Bootstrap, Native Css, HTML, Native JavaScript
 - Fajar (Backend Developer)
   - Framework: CodeIgniter, PHP Native
-  - Database: Oracle
+  - Database: MySql
 
 ## Fitur Utama
 1. **Pencarian Tanaman Hias**
@@ -23,17 +23,18 @@ Eflower adalah matakuliah proyek yang bertujuan merancang dan membangun aplikasi
 ## Teknologi yang Digunakan
 - **Frontend:**
   - Bootstrap: Desain responsif dan tata letak menarik.
-  - Native HTML: Struktur dasar halaman.
+  - HTML: Struktur dasar halaman.
   - Native JavaScript: Interaksi dinamis dan fungsionalitas tambahan.
+  - Native Css: Digunakan untuk fungsi tampilan khusus atau tambahan agar lebih menarik yang tidak tertutup dalam Bootstrap.
 
 - **Backend:**
   - CodeIgniter: Framework backend untuk mempermudah pengembangan.
   - PHP Native: Digunakan untuk fungsi khusus yang tidak tertutup dalam CodeIgniter.
-  - Oracle: Database untuk menyimpan data pengguna, transaksi, dan informasi tanaman hias.
+  - MySql: Database untuk menyimpan data pengguna, transaksi, dan informasi tanaman hias.
 
 ## Cara Menjalankan Proyek
 1. **Backend Setup**
-   - Pastikan server Oracle terpasang dan konfigurasi koneksi dilakukan.
+   - Pastikan server packaging yang terdapat MySql seperti Xampp terpasang dan konfigurasi koneksi dilakukan.
    - Impor skema database yang disediakan.
 
 2. **Frontend Setup**

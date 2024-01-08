@@ -79,3 +79,7 @@ body {
 .bd-mode-toggle .dropdown-menu .active .bi {
 	display: block !important;
 }
+
+.text-leaf{
+    color: #EC8F5E;
+}

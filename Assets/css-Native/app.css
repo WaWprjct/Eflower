@@ -80,15 +80,46 @@ body {
 	display: block !important;
 }
 
-.text-leaf{
-    color: #EC8F5E;
+.text-leaf {
+	color: #f1eb90;
 }
 
-.bg-blur{
-    backdrop-filter: blur(15px);
+.bg-second-leaf{
+	background-color: #F1EB90;
+	color: #ec8f5e;
+}
+
+
+.bg-ktg-leaf{
+    background-color: #9FBB73;
+    color: white;
+}
+
+.bg-leaf {
+	background-color: #ec8f5e;
+	color: #ffff;
+}
+
+.btn-leaf {
+	background-color: #ec8f5e;
+	color: #ffff;
+}
+
+.btn-leaf:hover {
+	background-color: #f1eb90;
+	color: #ffff;
+}
+
+.btn-leaf:focus {
+	background-color: #f1eb90;
+	color: #ffff;
+}
+
+.non-deco {
+	text-decoration: none;
+}
+
+.bg-blur {
+	backdrop-filter: blur(15px);
 	background: rgba(225, 225, 225, 0.2);
-}
-
-bg-dgreen{
-    background-color: #F3B664;
 }

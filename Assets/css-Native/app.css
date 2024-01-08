@@ -83,3 +83,12 @@ body {
 .text-leaf{
     color: #EC8F5E;
 }
+
+.bg-blur{
+    backdrop-filter: blur(15px);
+	background: rgba(225, 225, 225, 0.2);
+}
+
+bg-dgreen{
+    background-color: #F3B664;
+}

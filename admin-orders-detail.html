@@ -10,7 +10,7 @@
 			name="author"
 			content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
 		<meta name="generator" content="Hugo 0.118.2" />
-		<title>Beranda</title>
+		<title>Orders - Eflower</title>
 
 		<link
 			rel="canonical"
@@ -157,7 +157,7 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav me-auto mb-2 mb-md-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
+							<a class="nav-link" aria-current="page" href="#">Home</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -175,7 +175,6 @@
 								>
 								<a href="/admin-product.html" class="dropdown-item">Produk</a>
 								<a href="/admin-order.html" class="dropdown-item">Order</a>
-								<a href="/admin-users.html" class="dropdown-item">Pengguna</a>
 							</div>
 						</li>
 					</ul>
@@ -191,7 +190,7 @@
 						<li class="nav-item dropdown">
 							<a
 								href="#"
-								class="nav-link dropdown-toggle"
+								class="nav-link dropdown-toggle active"
 								id="dropdown-2"
 								data-bs-toggle="dropdown"
 								aria-haspopup="true"
@@ -200,7 +199,7 @@
 							>
 							<div href="#" class="dropdown-menu" aria-labelledby="dropdown-2">
 								<a href="/profile.html" class="dropdown-item">Profile</a>
-								<a href="/orders.html" class="dropdown-item">Orders</a>
+								<a href="/orders.html" class="dropdown-item active">Orders</a>
 								<a href="#" class="dropdown-item">Logout</a>
 							</div>
 						</li>
@@ -211,103 +210,88 @@
 
 		<main role="main" class="container">
 			<div class="row">
-				<div class="container-fluid">
-					<div class="col-md-10 mx-auto">
-						<div class="card float-center">
-							<div class="card-header bg-leaf">
-								<span>Produk</span>
-								<a
-									href="/admin-product-form.html"
-									class="btn btn-sm btn-secondary">
-									<i class="fas fa-file-pen"></i>
-								</a>
-								<div class="float-end">
-									<form action="#">
-										<div class="input-group">
-											<input
-												type="text"
-												class="form-control form-control-sm text-center"
-												placeholder="Cari" />
-											<div class="input-group-append">
-												<button type="submit" class="btn btn-secondary btn-sm">
-													<i class="fas fa-search"></i>
-												</button>
-												<a href="#" class="btn btn-secondary btn-sm">
-													<i class="fas fa-eraser"></i>
-												</a>
-											</div>
-										</div>
-									</form>
+				<div class="col-md-10 mx-auto">
+                    <div class="col-md-12">
+						<div class="card">
+                            <div class="card-header bg-leaf">Detail Order #234567890
+                            <div class="float-end">
+                                <span class="badge bg-warning text-dark badge-pill rounded-pill">Menunggu Pembayaran</span>
+                            </div>
+                        </div>
+						<div class="card-body">
+                            <p>Nama: Nama_penerima</p>
+                            <p>Telp : 081234567890</p>
+                            <p>Alamat: Jl.Abc, Blok01, No.123, Nama_kota</p>
+                            <table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Produk</th>
+										<th scope="col" class="text-center">Harga</th>
+										<th scope="col" class="text-center">Jumlah</th>
+										<th scope="col" class="text-center">Subtotal</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">
+											<p>
+												<img src="https://placehold.co/50x50" alt="" />
+												<strong class="ms-3">Nama Produk</strong>
+											</p>
+										</td>
+										<td class="p-3 text-center">Rp100.000,-</td>
+										<td class="text-center p-3">
+											1
+										</td>
+										<td class="text-center p-3">Rp100.000,-</td>
+                                        <tr>
+                                            <td colspan="3"><strong>Total</strong></td>
+                                            <td class="text-center"><strong>Rp100.000,-</strong></td>
+                                        </tr>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="card-footer">
+							<form action="#">
+								<div class="input-group">
+									<select name="" id="" class="form-control">
+										<option value="wait">Menunggu pembayaran</option>
+										<option value="paid">Dibayar</option>
+										<option value="delivered">Dikirim</option>
+										<option value="cencel">Dibatalkan</option>
+									</select>
+									<div class="input-group p-2">
+										<button type="submit" class="btn btn-success">Update<i class="fas fa-paper-plane p-1"></i></button>
+									</div>
 								</div>
-							</div>
-							<div class="card-body">
-								<table class="table">
-									<thead>
-										<tr>
-											<th scope="col">#</th>
-											<th scope="col">Produk</th>
-											<th scope="col">Kategori</th>
-											<th scope="col">Harga</th>
-											<th scope="col">Stok</th>
-											<th scope="col"></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												<p>
-													<img src="https://placehold.co/70x70" alt="" /> Janda
-													bolong
-												</p>
-											</td>
-											<td>
-												<span class="badge bg-primary"
-													><i class="fas fa-tags"></i> daun</span
-												>
-											</td>
-											<td>Rp.100.000,-</td>
-											<td>Tersedia</td>
-											<td>
-												<form action="#">
-													<a href="#">
-														<button class="btn btn-sm">
-															<i class="fas fa-edit text-info"></i>
-														</button>
-													</a>
-													<button
-														type="submit"
-														onclick="return confirm('Are you Sure?')"
-														class="btn btn-sm">
-														<i class="fas fa-trash text-danger"></i>
-													</button>
-												</form>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<nav aria-label="Page navigation example">
-									<ul class="pagination">
-										<li class="page-item">
-											<a class="page-link" href="#">Previous</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#">1</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#">2</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#">3</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#">Next</a>
-										</li>
-									</ul>
-								</nav>
-							</div>
+							</form>
 						</div>
 					</div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-8 mt-2">
+							<div class="card">
+								<div class="card-header">
+									Bukti Pembayaran
+								</div>
+								<div class="card-body">
+									<p>Dari Rekening : 234567890</p>
+									<p>Atas Nama : Eflower_user</p>
+									<p>Nominal : Rp100.000,-</p>
+									<p>catatan : -</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mt-2">
+							<div class="card">
+								<div class="card-body"><img src="https://placehold.co/150x200" alt=""></div>
+								
+							</div>
+							
+						</div>
+                    </div>
 				</div>
 			</div>
 		</main>

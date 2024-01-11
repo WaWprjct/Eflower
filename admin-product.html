@@ -24,9 +24,6 @@
 			href="/assets/libs/bootstrap/css/bootstrap.min.css"
 			rel="stylesheet" />
 
-		<link rel="stylesheet" href="Assets/css-native/form-admin.css" />
-		<link rel="stylesheet" href="Assets/css-native/admin_css.css" />
-
 		<!-- fontawesome CSS -->
 		<link rel="stylesheet" href="/assets/libs/fontawesome/css/all.min.css" />
 
@@ -218,50 +215,98 @@
 					<div class="col-md-10 mx-auto">
 						<div class="card float-center">
 							<div class="card-header bg-leaf">
-								<span>Tambah Kategori</span>
+								<span>Pengguna</span>
+								<a
+									href="/admin-users-form.html"
+									class="btn btn-sm btn-secondary">
+									<i class="fas fa-user-pen"></i>
+								</a>
+								<div class="float-end">
+									<form action="#">
+										<div class="input-group">
+											<input
+												type="text"
+												class="form-control form-control-sm text-center"
+												placeholder="Cari" />
+											<div class="input-group-append">
+												<button type="submit" class="btn btn-secondary btn-sm">
+													<i class="fas fa-search"></i>
+												</button>
+												<a href="#" class="btn btn-secondary btn-sm">
+													<i class="fas fa-eraser"></i>
+												</a>
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 							<div class="card-body">
-								<form action="#" class="signup" method="post">
-									<div class="form-floating">
-										<input
-											class="form-control"
-											type="text"
-											placeholder="name"
-											name="category"
-											id="title"
-											onkeyup="createSlug()"
-											required />
-										<label for="category">Kategori</label>
-									</div>
-
-									<div class="mt-3 form-floating">
-										<input
-											id="slug"
-											class="form-control"
-											type="text"
-											placeholder="name"
-											name="slug" />
-										<label for="slug">Slug</label>
-									</div>
-
-									<a href="/admin-category.html" class="mt-3 btn btn-warning">
-										<i class="p-1 fas fa-angle-left"></i>Kembali
-									</a>
-									<!-- akhir tombol login -->
-
-									<button class="float-end mt-3 btn btn-success" type="submit">
-										Simpan <i class="p-1 fas fa-floppy-disk"></i>
-									</button>
-								</form>
+								<table class="table">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Pengguna</th>
+											<th scope="col">Email</th>
+											<th scope="col">Role</th>
+											<th scope="col">Status</th>
+											<th scope="col"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<p>
+													<img src="https://placehold.co/70x70" alt="" /> Admin
+												</p>
+											</td>
+											<td>admin@mail.com</td>
+											<td>Admin</td>
+											<td>Aktif</td>
+											<td>
+												<form action="#">
+													<a href="#">
+														<button class="btn btn-sm">
+															<i class="fas fa-edit text-info"></i>
+														</button>
+													</a>
+													<button
+														type="submit"
+														onclick="return confirm('Are you Sure?')"
+														class="btn btn-sm">
+														<i class="fas fa-trash text-danger"></i>
+													</button>
+												</form>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item">
+											<a class="page-link" href="#">Previous</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">1</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">2</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">3</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">Next</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
-		<script src="/assets/libs/jquery/jquery-3.7.1.min.js"></script>
 		<script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-		<script src="/assets/js-native/admin-category.js"></script>
+		<script src="/assets/libs/jquery/jquery-3.7.1.min.js"></script>
 	</body>
 </html>
